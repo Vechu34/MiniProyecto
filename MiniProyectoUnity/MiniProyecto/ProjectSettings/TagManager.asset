@@ -3,17 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Floor
+  - Spike
+  - OneWay
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Floor
+  - Spike
+  - OneWay
   - 
   - 
   - 
@@ -40,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 1061007965
+    locked: 0
+  - name: BuildingFloor
+    uniqueID: 224808045
+    locked: 0
+  - name: Character
+    uniqueID: 368637549
+    locked: 0
+  - name: Canvas
+    uniqueID: 2537786151
     locked: 0
