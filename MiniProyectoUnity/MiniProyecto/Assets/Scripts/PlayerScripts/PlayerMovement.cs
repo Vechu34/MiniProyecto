@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
 
     Animator animator;
 
+
+
     [SerializeField] LayerMask enemyLayer;
     public float hitDistance = 1f;
 
@@ -173,5 +175,6 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.transform.position, attackRadius);
     }
 }
+
 
 
