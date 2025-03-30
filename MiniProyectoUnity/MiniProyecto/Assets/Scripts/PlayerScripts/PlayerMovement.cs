@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -182,6 +183,14 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetBool("isAttacking", false);
         isAttack = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Victory"))
+        {
+            SceneManager.LoadScene("VictoryScene");
+        }
     }
 
     private void OnDrawGizmos()
