@@ -32,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
     Animator animator;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip jumpSFX;
+    public AudioClip attackSFX;
+
 
 
     [SerializeField] LayerMask enemyLayer;
@@ -120,6 +125,15 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * 1.11f);
             animator.SetBool("isJumping", true);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            audioSource.PlayOneShot(jumpSFX);
+        }
+        if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.P)) && !isAttack)
+        {
+            audioSource.PlayOneShot(attackSFX);
         }
     }
     public void Jumplimit()

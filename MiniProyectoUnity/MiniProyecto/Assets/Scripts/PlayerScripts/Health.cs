@@ -57,6 +57,7 @@ public class Health : MonoBehaviour
     {
         if (((1 << collision.gameObject.layer) & (hitSpikeLayer | hitEnemyLayer)) != 0)
         {
+            TakeDamage(1);
             if (((1 << collision.gameObject.layer) & hitEnemyLayer) != 0)
             {
                 playerMovement.kbCounter = playerMovement.kbTotalTime;
@@ -69,11 +70,10 @@ public class Health : MonoBehaviour
                 {
                     playerMovement.knockFromRight = true;
                 }
-
-                TakeDamage(1);
                 //Debug.Log("¡Tocaste un pincho! Vida restante: " + health);
             }
         }
+
         if (((1 << collision.gameObject.layer) & healLayer) != 0)
         {
             Heal(1); // Heal by 1 heart (or modify as needed)

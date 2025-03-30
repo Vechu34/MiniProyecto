@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth;
     private Animator animator;
     public CapsuleCollider2D enemyCollider;
+    private bool isDead;
+
     // Start is called before the first frame update
     void Start()
     {
