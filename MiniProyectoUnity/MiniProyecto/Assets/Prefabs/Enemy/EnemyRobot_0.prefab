@@ -122,7 +122,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 9.035622
+  m_Mass: 9.8776655
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -170,7 +170,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.63, y: 4}
+  m_Size: {x: 2.93, y: 4}
   m_Direction: 0
 --- !u!114 &1178570613592274468
 MonoBehaviour:

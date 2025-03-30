@@ -36,13 +36,13 @@ public class Projectile : MonoBehaviour
         // Si el proyectil golpea un enemigo, le causa daño y desaparece
         if (((1 << collisionLayer) & enemyLayer) != 0)
         {
-            Debug.Log("Proyectil impactó a un enemigo: " + collision.gameObject.name);
+            //Debug.Log("Proyectil impactó a un enemigo: " + collision.gameObject.name);
 
             EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
                 enemyHealth.health -= damage;
-                Debug.Log("Daño aplicado, vida restante: " + enemyHealth.health);
+                //Debug.Log("Daño aplicado, vida restante: " + enemyHealth.health);
             }
 
             Destroy(gameObject); // El proyectil desaparece al impactar
@@ -50,7 +50,7 @@ public class Projectile : MonoBehaviour
         // Si el proyectil golpea cualquier otra capa en "collisionLayers", desaparece
         else if (((1 << collisionLayer) & collisionLayers) != 0)
         {
-            Debug.Log("Proyectil impactó con: " + collision.gameObject.name);
+           // Debug.Log("Proyectil impactó con: " + collision.gameObject.name);
             Destroy(gameObject);
         }
     }

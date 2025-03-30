@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
-  - Spike
-  - OneWay
   layers:
   - Default
   - TransparentFX
@@ -17,9 +15,9 @@ TagManager:
   - Floor
   - Spike
   - OneWay
-  - 
-  - 
-  - 
+  - Checkpoint
+  - Player
+  - Heal
   - 
   - 
   - 
